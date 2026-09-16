@@ -1,4 +1,5 @@
 import { PageHeader, SectionLabel } from "@/components/page-header";
+import { PackingChecklist } from "@/components/packing-checklist";
 import {
   packingChecklist,
   dressCode,
@@ -7,7 +8,7 @@ import {
   emergencyContacts,
   emergencyContactsDisplay,
 } from "@/data/essentials";
-import { CheckSquare, Phone, ListChecks } from "lucide-react";
+import { Phone, ListChecks } from "lucide-react";
 
 export default function EssentialsPage() {
   return (
@@ -23,17 +24,7 @@ export default function EssentialsPage() {
         {/* 01 Packing */}
         <section>
           <SectionLabel number="01" title="Packing Checklist" />
-          <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-            {packingChecklist.map((item) => (
-              <li
-                key={item}
-                className="card-surface flex items-start gap-3 px-4 py-3"
-              >
-                <CheckSquare className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-dark" />
-                <span className="text-sm text-navy/80">{item}</span>
-              </li>
-            ))}
-          </ul>
+          <PackingChecklist items={packingChecklist} />
         </section>
 
         {/* 02 Dress code */}
