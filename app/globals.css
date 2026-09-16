@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-navy min-h-screen antialiased;
+    background-image:
+      radial-gradient(circle at 88% 6%, rgba(158, 202, 237, 0.4), transparent 42%),
+      radial-gradient(circle at 6% 96%, rgba(200, 180, 235, 0.35), transparent 45%),
+      linear-gradient(160deg, #e8e4f3 0%, #dff0ea 100%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-gold/40 text-navy;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1e3a5f;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Uppercase eyebrow label */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-navy/60;
+  }
+
+  /* Numbered section label, e.g. 01 / 02 / 03 */
+  .section-number {
+    @apply font-black text-navy/25 text-2xl leading-none;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .heading-display {
+    @apply font-black uppercase tracking-wide text-navy;
+  }
+
+  .card-surface {
+    @apply bg-white border border-navy/15 rounded-2xl shadow-card;
+  }
+
+  .hairline {
+    @apply border-t border-navy/10;
+  }
+
+  .pill {
+    @apply inline-flex items-center justify-center rounded-pill px-4 py-2 text-sm font-semibold transition-colors;
+  }
+
+  .pill-primary {
+    @apply pill bg-navy text-white hover:bg-navy-600;
+  }
+
+  .pill-outline {
+    @apply pill border border-navy/20 text-navy bg-white hover:bg-navy/5;
+  }
+
+  .pill-gold {
+    @apply pill bg-gold text-navy hover:bg-gold-dark;
+  }
+
+  /* Data table styling: navy header, alternating tinted rows */
+  .data-table {
+    @apply w-full border-collapse overflow-hidden rounded-2xl border border-navy/15 bg-white text-left text-sm;
+  }
+
+  .data-table thead tr {
+    @apply bg-navy text-white;
+  }
+
+  .data-table th {
+    @apply px-4 py-3 text-xs font-bold uppercase tracking-wider whitespace-nowrap;
+  }
+
+  .data-table td {
+    @apply px-4 py-3 align-middle text-navy;
+  }
+
+  .data-table tbody tr:nth-child(even) {
+    @apply bg-mint-light/40;
+  }
+
+  .data-table tbody tr:nth-child(odd) {
+    @apply bg-white;
+  }
+
+  .data-table tbody tr:hover {
+    @apply bg-gold/10;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(30, 58, 95, 0.25);
+    border-radius: 999px;
+  }
+}
