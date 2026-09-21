@@ -12,6 +12,7 @@ import {
   Users,
   Link2,
   ListChecks,
+  Lightbulb,
   Menu,
   X,
 } from "lucide-react";
@@ -26,6 +27,7 @@ const navItems = [
   { href: "/attendees", label: "Attendees", icon: Users },
   { href: "/neca-links", label: "NECA Links", icon: Link2 },
   { href: "/essentials", label: "Essentials", icon: ListChecks },
+  { href: "/reflect", label: "Reflect", icon: Lightbulb },
 ];
 
 export function Nav() {

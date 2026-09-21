@@ -7,6 +7,7 @@ import {
   Users,
   Link2,
   ListChecks,
+  Lightbulb,
   Home as HomeIcon,
   ArrowRight,
 } from "lucide-react";
@@ -56,6 +57,12 @@ const pages = [
     icon: ListChecks,
     title: "Essentials",
     description: "Packing, dress code, expenses, and survival tips.",
+  },
+  {
+    href: "/reflect",
+    icon: Lightbulb,
+    title: "Reflect",
+    description: "Reflection questions and a fillable form to bring ideas home.",
   },
 ];
 
